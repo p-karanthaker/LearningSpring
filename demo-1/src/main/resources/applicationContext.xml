@@ -1,13 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xmlns="http://www.springframework.org/schema/beans"
+  xmlns:context="http://www.springframework.org/schema/context"
   xsi:schemaLocation="http://www.springframework.org/schema/beans
-    http://www.springframework.org/schema/beans/spring-beans.xsd">
+    http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
 
   <bean class="io.karanthaker.spring.demo1.LoggerConfig" id="loggerConfig" init-method="initLogger">
     <property name="rootLoggerLevel" value="FINE"/>
     <property name="printedLoggerLevel" value="FINE"/>
   </bean>
+
+  <!-- Load properties file -->
+  <context:property-placeholder location="sport.properties" />
 
   <bean class="io.karanthaker.spring.demo1.HappyFortuneService"
     id="fortune">
@@ -27,8 +31,8 @@
     <property name="fortuneService" ref="fortune" />
 
     <!-- set up literal value injection -->
-    <property name="emailAddress" value="coach@karanthaker.io" />
-    <property name="team" value="Kwik Kricket" />
+    <property name="emailAddress" value="${coach.email}" />
+    <property name="team" value="${coach.team}" />
   </bean>
 
 </beans>
