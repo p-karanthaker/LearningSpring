@@ -9,9 +9,15 @@
     <property name="printedLoggerLevel" value="FINE"/>
   </bean>
 
-  <bean class="io.karanthaker.spring.demo1.LiftingCoach"
-    id="coach">
+  <bean id="fortune"
+    class="io.karanthaker.spring.demo1.HappyFortuneService">
   </bean>
 
+  <bean class="io.karanthaker.spring.demo1.TrackCoach"
+    id="coach">
+
+    <!-- set up constructor injection -->
+    <constructor-arg ref="fortune" />
+  </bean>
 
 </beans>

@@ -6,4 +6,10 @@ public class LiftingCoach implements Coach {
   public String getDailyWorkout() {
     return "Do bicep curls.";
   }
+
+  @Override
+  public String getDailyFortune() {
+    return null;
+  }
+
 }
