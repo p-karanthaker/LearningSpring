@@ -2,7 +2,23 @@
 <project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xmlns="http://maven.apache.org/POM/4.0.0"
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <groupId>io.karanthaker.spring</groupId>
   <artifactId>demo-1</artifactId>
+  <modelVersion>4.0.0</modelVersion>
+  <version>1.0-SNAPSHOT</version>
+
+  <dependencies>
+    <dependency>
+      <artifactId>spring-core</artifactId>
+      <groupId>org.springframework</groupId>
+      <version>5.1.7.RELEASE</version>
+    </dependency>
+    <dependency>
+      <artifactId>spring-context</artifactId>
+      <groupId>org.springframework</groupId>
+      <version>5.1.7.RELEASE</version>
+    </dependency>
+  </dependencies>
 
   <build>
     <plugins>
@@ -15,23 +31,5 @@
       </plugin>
     </plugins>
   </build>
-  <dependencies>
-    <dependency>
-      <artifactId>spring-core</artifactId>
-      <groupId>org.springframework</groupId>
-      <version>5.1.7.RELEASE</version>
-    </dependency>
-    <dependency>
-      <artifactId>spring-context</artifactId>
-      <groupId>org.springframework</groupId>
-      <version>5.1.7.RELEASE</version>
-    </dependency>
-
-  </dependencies>
-  <groupId>io.karanthaker.spring</groupId>
-
-  <modelVersion>4.0.0</modelVersion>
-
-  <version>1.0-SNAPSHOT</version>
 
 </project>
