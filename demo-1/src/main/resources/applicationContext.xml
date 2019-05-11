@@ -13,7 +13,7 @@
   <!-- Load properties file -->
   <context:property-placeholder location="sport.properties" />
 
-  <bean class="io.karanthaker.spring.demo1.HappyFortuneService"
+  <bean class="io.karanthaker.spring.demo1.RandomFortuneService"
     id="fortune">
   </bean>
 
