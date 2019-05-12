@@ -15,7 +15,8 @@
   </bean>
 
   <bean class="io.karanthaker.spring.demo1.TrackCoach"
-    id="coach">
+    id="coach"
+    scope="prototype">
 
     <!-- set up constructor injection -->
     <constructor-arg ref="fortune"/>
